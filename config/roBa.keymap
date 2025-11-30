@@ -64,7 +64,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 6 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
     };
@@ -91,7 +91,7 @@
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &lt_to_layer_0 1 LANG_HANGEUL  &lt 2 SPACE  &lt_to_layer_0 5 LANGUAGE_2      &lt 6 BACKSPACE  &lt 1 ENTER                             &mt RCTRL TAB
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LS(UP_ARROW)) LS(LC(DOWN_ARROW))>;
+            sensor-bindings = <&inc_dec_kp LC(LS(DOWN_ARROW)) LS(LC(UP_ARROW))>;
         };
 
         windows_default_layer {
@@ -143,10 +143,10 @@
 
         SHORTCUT {
             bindings = <
-&trans  &kp LC(LS(TAB))     &kp LG(RS(T))  &kp LC(TAB)         &trans                           &trans  &trans                  &kp LC(UP_ARROW)    &trans                   &trans
-&trans  &kp LG(LEFT_ARROW)  &kp LG(T)      &kp LG(RIGHT)       &trans       &trans      &trans  &trans  &kp LC(LEFT_ARROW)      &kp LC(UP_ARROW)    &kp LC(RIGHT_ARROW)      &trans
-&trans  &kp LG(UP_ARROW)    &kp LG(W)      &kp LG(DOWN_ARROW)  &trans       &trans      &trans  &trans  &kp LC(LA(LEFT_ARROW))  &kp LC(DOWN_ARROW)  &kp LC(LA(RIGHT_ARROW))  &trans
-&trans  &trans              &trans         &kp LA(TAB)         &kp LG(TAB)  &trans      &trans  &trans                                                                       &trans
+&trans  &kp LC(LS(TAB))     &kp LG(RS(T))  &kp LC(TAB)         &trans                           &trans              &trans                  &trans                &trans                   &trans
+&trans  &kp LG(LEFT_ARROW)  &kp LG(T)      &kp LG(RIGHT)       &trans       &trans      &trans  &kp LC(DOWN_ARROW)  &kp LC(LEFT_ARROW)      &kp LC(UP_ARROW)      &kp LC(RIGHT_ARROW)      &trans
+&trans  &kp LG(UP_ARROW)    &kp LG(W)      &kp LG(DOWN_ARROW)  &trans       &trans      &trans  &trans              &kp LC(LA(LEFT_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT_ARROW))  &trans
+&trans  &trans              &trans         &kp LA(TAB)         &kp LG(TAB)  &trans      &trans  &trans                                                                                     &trans
             >;
         };
 
