@@ -186,7 +186,7 @@
         SYMBOL {
             bindings = <
 &kp ESCAPE      &kp JP_AMPERSAND  &kp JP_ASTERISK   &kp JP_LPAREN  &kp JP_RPAREN                             &trans        &kp JP_LBRACKET  &kp JP_RBRACKET  &trans         &trans
-&kp TAB         &kp DOLLAR        &kp PERCENT       &kp JP_CARET   &kp JP_TILDE      &trans      &trans      &kp JP_COLON  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_QUOTE   &kp PIPE
+&kp TAB         &kp DOLLAR        &kp PERCENT       &kp JP_CARET   &kp JP_TILDE      &trans      &trans      &kp JP_COLON  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_QUOTE   &kp JP_PIPE
 &kp LEFT_SHIFT  &kp EXCLAMATION   &kp JP_AT         &kp HASH       &kp JP_BACKQUOTE  &trans      &trans      &kp SEMI      &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_DQUOTE  &kp JP_YEN
 &kp LCTRL       &kp LALT          &kp LEFT_COMMAND  &trans         &trans            &trans      &kp DELETE  &trans                                                         &trans
             >;
@@ -195,7 +195,7 @@
         NUM_FUNCTION {
             bindings = <
 &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                                   &kp JP_ASTERISK  &kp F7  &kp F8  &kp F9  &kp F12
-&trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS      &trans      &trans         &kp MINUS        &kp F4  &kp F5  &kp F6  &kp F11
+&trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_PLUS   &trans      &trans         &kp MINUS        &kp F4  &kp F5  &kp F6  &kp F11
 &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL  &trans      &trans         &kp SLASH        &kp F1  &kp F2  &kp F3  &kp F10
 &trans           &trans           &trans           &trans           &trans        &trans      &kp BACKSPACE  &trans                                   &trans
             >;
