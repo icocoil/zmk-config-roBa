@@ -156,6 +156,13 @@
             display-name = "Toggle Layer Off";
             toggle-mode = "off";
         };
+
+        minus_under: minus_under {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp JP_UNDERSCORE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
