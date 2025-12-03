@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -27,7 +28,6 @@
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
-
 
 &mt {
     flavor = "balanced";
@@ -94,6 +94,43 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        bt0: bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 0 &tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 0>;
+
+            label = "BT0";
+        };
+
+        bt1: bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 0 &tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 1>,
+                <&macro_wait_time 500>,
+                <&tog_on 1>;
+
+            label = "BT1";
+        };
+
+        bt0_test: bt0_test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 0 &tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 0>,
+                <&macro_wait_time 500>,
+                <&tog_on 1>;
+
+            label = "BT0_TEST";
+        };
     };
 
     behaviors {
@@ -148,19 +185,19 @@
 
         SYMBOL {
             bindings = <
-&kp ESCAPE      &kp JP_AMPERSAND &kp JP_ASTERISK &kp JP_LPAREN           &kp JP_RPAREN                          &trans     &kp JP_LBRACKET      &kp JP_RBRACKET      &trans             &trans
-&kp TAB         &kp DOLLAR       &kp PERCENT     &kp JP_CARET            &kp JP_TILDE              &trans      &trans      &kp JP_COLON  &kp JP_LPAREN  &kp JP_RPAREN  &kp JP_QUOTE   &kp PIPE
-&kp LEFT_SHIFT  &kp EXCLAMATION  &kp JP_AT       &kp HASH                &kp JP_BACKQUOTE          &trans      &trans      &kp SEMI   &kp JP_LBRACE        &kp JP_RBRACE        &kp JP_DQUOTE  &kp JP_YEN
-&kp LCTRL       &kp LALT         &kp LEFT_COMMAND  &trans                &trans                 &trans      &kp DELETE  &trans                                                                     &trans
+&kp ESCAPE      &kp JP_AMPERSAND  &kp JP_ASTERISK   &kp JP_LPAREN  &kp JP_RPAREN                             &trans        &kp JP_LBRACKET  &kp JP_RBRACKET  &trans         &trans
+&kp TAB         &kp DOLLAR        &kp PERCENT       &kp JP_CARET   &kp JP_TILDE      &trans      &trans      &kp JP_COLON  &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_QUOTE   &kp PIPE
+&kp LEFT_SHIFT  &kp EXCLAMATION   &kp JP_AT         &kp HASH       &kp JP_BACKQUOTE  &trans      &trans      &kp SEMI      &kp JP_LBRACE    &kp JP_RBRACE    &kp JP_DQUOTE  &kp JP_YEN
+&kp LCTRL       &kp LALT          &kp LEFT_COMMAND  &trans         &trans            &trans      &kp DELETE  &trans                                                         &trans
             >;
         };
 
         NUM_FUNCTION {
             bindings = <
-&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                                &kp JP_ASTERISK  &kp F7  &kp F8  &kp F9  &kp F12
-&trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &trans      &trans         &kp MINUS     &kp F4  &kp F5  &kp F6  &kp F11
-&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL  &trans   &trans         &kp SLASH     &kp F1  &kp F2  &kp F3  &kp F10
-&trans           &trans           &trans           &trans           &trans     &trans      &kp BACKSPACE  &trans                                &trans
+&trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans                                   &kp JP_ASTERISK  &kp F7  &kp F8  &kp F9  &kp F12
+&trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS      &trans      &trans         &kp MINUS        &kp F4  &kp F5  &kp F6  &kp F11
+&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp JP_EQUAL  &trans      &trans         &kp SLASH        &kp F1  &kp F2  &kp F3  &kp F10
+&trans           &trans           &trans           &trans           &trans        &trans      &kp BACKSPACE  &trans                                   &trans
             >;
         };
 
@@ -193,10 +230,10 @@
 
         BLUETOOTH {
             bindings = <
-&trans        &trans        &trans        &trans        &trans                            &trans       &trans  &trans  &trans  &trans
-&to 0         &to 1         &trans        &trans        &trans        &trans      &trans  &trans       &trans  &trans  &trans  &trans
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans  &bootloader  &trans  &trans  &trans  &bt BT_CLR
-&trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                               &bt BT_CLR_ALL
+&trans     &trans  &trans        &trans        &trans                            &trans       &trans  &trans  &trans  &trans
+&bt0_test  &trans  &trans        &trans        &trans        &trans      &trans  &trans       &trans  &trans  &trans  &trans
+&bt0       &bt1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans      &trans  &bootloader  &trans  &trans  &trans  &bt BT_CLR
+&trans     &trans  &trans        &trans        &trans        &trans      &trans  &trans                               &bt BT_CLR_ALL
             >;
         };
     };
