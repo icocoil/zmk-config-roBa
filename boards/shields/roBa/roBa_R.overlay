@@ -26,12 +26,9 @@
         scroller {
             layers = <5 6>;
             input-processors = <
-            // スクロールの横振れを抑えるためにトラックボールの入力を小さくする
-            &zip_xy_scaler 1 32
             &zip_xy_to_scroll_mapper
             &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
-            // 小さくした分を補正する
-            &zip_scroll_scaler 12 1
+            &zip_scroll_scaler 1 16
             >;
         };
     };
