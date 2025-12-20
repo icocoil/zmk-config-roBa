@@ -21,15 +21,14 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        // input-processors = <&zip_temp_layer 4 5000>;
+        input-processors = <&zip_temp_layer 4 5000>;
 
         scroller {
             layers = <5 6>;
             input-processors = <
-                &zip_xy_scaler 10 1
                 &zip_xy_to_scroll_mapper
-                // &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
-                &zip_scroll_scaler 1 1
+                &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
+                &zip_scroll_scaler 1 16
             >;
         };
     };
