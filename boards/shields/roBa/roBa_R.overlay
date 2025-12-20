@@ -72,5 +72,8 @@
         18 // J
         19 // K
         20 // L
+        34 // control
+        35 // option or windows
+        36 // command or alt
     >;
 };
