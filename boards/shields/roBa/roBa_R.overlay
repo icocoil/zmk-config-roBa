@@ -16,11 +16,16 @@
 };
 
 / {
-    trackball_listener {
+    trackball_listener: trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&zip_temp_layer 4 5000>;
+
+        scroller {
+            layers = <5 6>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        }
     };
 };
 
