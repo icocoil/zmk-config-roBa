@@ -34,8 +34,9 @@
     quick-tap-ms = <0>;
 };
 
-/*
 &trackball {
+    scroll-layers = <5 6>;
+
     arrows {
         layers = <8 9>;
         bindings =
@@ -49,7 +50,6 @@
         tap-ms = <5>;
     };
 };
-*/
 
 / {
     combos {
