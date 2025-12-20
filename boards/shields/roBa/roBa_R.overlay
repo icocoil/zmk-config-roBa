@@ -17,18 +17,6 @@
 };
 
 / {
-    // デッドゾーン（微小入力カット）の定義
-    input_processors {
-        zip_scroll_deadzone: zip_scroll_deadzone {
-            compatible = "zmk,input-processor-val-remap";
-            #input-processor-cells = <0>;
-            
-            // 入力 <0〜2> までは出力 0 (無視)
-            // 入力 <3> からはそのまま 3 を出力
-            points = <0 0>, <2 0>, <3 3>;
-        };
-    };
-
     trackball_listener: trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
@@ -38,10 +26,9 @@
         scroller {
             layers = <5 6>;
             input-processors = <
-            &zip_scroll_deadzone
-            &zip_xy_transform INPUT_TRANSFORM_Y_INVERT
-            &zip_xy_scaler 1 12
-            &zip_xy_to_scroll_mapper
+                &zip_xy_to_scroll_mapper
+                &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
+                &zip_xy_scaler 1 20
             >;
         };
     };
