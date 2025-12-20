@@ -233,10 +233,10 @@
 
         WINDOWS_SCROLL {
             bindings = <
-&trans            &trans              &kp RS(LC(T))  &trans               &trans                                  &trans  &trans              &trans            &trans               &trans
-&kp LC(UP_ARROW)  &kp LC(LS(TAB))     &kp LC(T)      &kp LC(TAB)          &kp LC(DOWN_ARROW)  &trans      &trans  &trans  &trans              &trans            &trans               &trans
-&trans            &kp LA(LEFT_ARROW)  &kp LC(W)      &kp LA(RIGHT_ARROW)  &trans              &trans      &trans  &trans  &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &trans
-&trans            &trans              &trans         &trans               &trans              &trans      &trans  &trans                                                             &trans
+&trans            &trans              &kp RS(LC(T))  &trans               &trans                                  &trans  &trans                  &trans            &trans                   &trans
+&kp LC(UP_ARROW)  &kp LC(LS(TAB))     &kp LC(T)      &kp LC(TAB)          &kp LC(DOWN_ARROW)  &trans      &trans  &trans  &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)       &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(D))
+&trans            &kp LA(LEFT_ARROW)  &kp LC(W)      &kp LA(RIGHT_ARROW)  &trans              &trans      &trans  &trans  &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)      &trans
+&trans            &trans              &trans         &trans               &trans              &trans      &trans  &trans                                                                     &trans
             >;
         };
 
