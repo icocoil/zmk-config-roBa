@@ -69,9 +69,13 @@
 
 &zip_temp_layer {
     excluded-positions = <
+        10 // command or control (Hold)
         18 // J
         19 // K
         20 // L
+        21 // command or control (Hold)
+        22 // shift (hold)
+        33 // shift (hold)
         34 // control
         35 // option or windows
         36 // command or alt
