@@ -103,7 +103,7 @@
             label = "BT1";
         };
 
-       exit_AML: exit_AML {
+        exit_AML: exit_AML {
             compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -173,10 +173,10 @@
 
         mac_default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 10 P
-&mt LGUI A        &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHIFT SLASH
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &lt 8 LANGUAGE_2  &lt 7 SPACE  &lt 5 LANGUAGE_1      &backspace_delete  &lt 2 ENTER                             &mt RCTRL TAB
+&kp Q                             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 10 P
+&mt_exit_AML_on_tap LGUI A        &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RSHIFT SLASH
+&kp LCTRL                         &kp LEFT_ALT  &kp LEFT_GUI  &lt 8 LANGUAGE_2  &lt 7 SPACE  &lt 5 LANGUAGE_1      &backspace_delete  &lt 2 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(DOWN_ARROW)) LS(LC(UP_ARROW))>;
@@ -184,10 +184,10 @@
 
         windows_default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 10 P
-&mt LCTRL A       &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHIFT SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 9 LANGUAGE_2  &lt 7 SPACE  &lt 6 LANGUAGE_1      &backspace_delete  &lt 3 ENTER                             &mt RCTRL TAB
+&kp Q                             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 10 P
+&mt_exit_AML_on_tap LCTRL A       &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RSHIFT SLASH
+&kp LCTRL                         &kp LEFT_WIN  &kp LEFT_ALT  &lt 9 LANGUAGE_2  &lt 7 SPACE  &lt 6 LANGUAGE_1      &backspace_delete  &lt 3 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
