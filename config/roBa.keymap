@@ -226,7 +226,7 @@
             bindings = <
 &trans  &trans           &kp LG(RS(T))  &trans       &trans                                    &trans    &trans                  &trans                &trans                   &trans
 &trans  &kp LC(LS(TAB))  &kp LG(T)      &kp LC(TAB)  &kp LG(UP_ARROW)    &trans      &trans    &trans    &kp LC(LEFT_ARROW)      &kp LC(UP_ARROW)      &kp LC(RIGHT_ARROW)      &kp LC(DOWN_ARROW)
-&trans  &trans           &kp LG(W)      &trans       &kp LG(DOWN_ARROW)  &trans      &trans    &trans    &kp LC(LA(LEFT_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT_ARROW))  &trans
+&trans  &mkp MB4         &kp LG(W)      &mkp MB5     &kp LG(DOWN_ARROW)  &trans      &trans    &trans    &kp LC(LA(LEFT_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT_ARROW))  &trans
 &trans  &trans           &trans         &trans       &trans              &trans      &mkp MB4  &mkp MB5                                                                         &trans
             >;
         };
@@ -235,7 +235,7 @@
             bindings = <
 &trans  &trans           &kp RS(LC(T))  &trans       &trans                                    &trans    &trans                  &trans            &trans                   &trans
 &trans  &kp LC(LS(TAB))  &kp LC(T)      &kp LC(TAB)  &kp LC(UP_ARROW)    &trans      &trans    &trans    &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)       &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(D))
-&trans  &trans           &kp LC(W)      &trans       &kp LC(DOWN_ARROW)  &trans      &trans    &trans    &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)      &trans
+&trans  &mkp MB4         &kp LC(W)      &mkp MB5     &kp LC(DOWN_ARROW)  &trans      &trans    &trans    &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)      &trans
 &trans  &trans           &trans         &trans       &trans              &trans      &mkp MB4  &mkp MB5                                                                     &trans
             >;
         };
