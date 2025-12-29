@@ -193,7 +193,7 @@
 &kp LCTRL                         &kp LEFT_ALT  &kp LEFT_GUI  &lt 8 LANGUAGE_2  &lt 7 SPACE  &lt 5 LANGUAGE_1      &backspace_delete  &lt 2 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LS(DOWN_ARROW)) LS(LC(UP_ARROW))>;
+            sensor-bindings = <&inc_dec_kp LS(LA(C_VOLUME_DOWN)) LS(LA(C_VOLUME_UP))>;
         };
 
         windows_default_layer {
