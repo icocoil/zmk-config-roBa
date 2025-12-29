@@ -138,10 +138,12 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp JP_UNDERSCORE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         // 長押しで指定したキー, タップで "-", Shift+タップで "_"
+
         minus_under: minus_under {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&minus_under_morph>;
@@ -261,19 +263,19 @@
 
         MAC_ARROW {
             bindings = <
-&trans    &trans          &kp UP_ARROW    &trans           &trans                       &trans         &trans          &trans        &trans            &trans
-&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans  &trans         &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LCTRL
-&trans    &trans          &trans          &trans           &trans   &trans      &trans  &trans         &trans          &trans        &trans            &trans
-&trans    &trans          &trans          &trans           &trans   &trans      &trans  &kp LG(SPACE)                                                  &trans
+&trans    &trans          &kp UP_ARROW    &trans           &trans                          &trans         &trans          &trans        &trans            &trans
+&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans     &trans         &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LCTRL
+&trans    &trans          &trans          &trans           &trans   &trans      &trans     &trans         &trans          &trans        &trans            &trans
+&trans    &trans          &trans          &trans           &trans   &trans      &kp LA(V)  &kp LG(SPACE)                                                  &trans
             >;
         };
 
         WINDOWS_ARROW {
             bindings = <
-&trans    &trans          &kp UP_ARROW    &trans           &trans                       &trans         &trans          &trans     &trans        &trans
-&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans  &trans         &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &trans
-&trans    &trans          &trans          &trans           &trans   &trans      &trans  &trans         &trans          &trans     &trans        &trans
-&trans    &trans          &trans          &trans           &trans   &trans      &trans  &kp LA(SPACE)                                           &trans
+&trans    &trans          &kp UP_ARROW    &trans           &trans                          &trans         &trans          &trans     &trans        &trans
+&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans     &trans         &kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT  &trans
+&trans    &trans          &trans          &trans           &trans   &trans      &trans     &trans         &trans          &trans     &trans        &trans
+&trans    &trans          &trans          &trans           &trans   &trans      &kp LG(V)  &kp LA(SPACE)                                           &trans
             >;
         };
 
