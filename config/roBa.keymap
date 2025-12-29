@@ -134,12 +134,22 @@
             tapping-term-ms = <200>;
         };
 
-        minus_under: minus_under {
+        minus_under_morph: minus_under_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp JP_UNDERSCORE>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // 長押しで指定したキー, タップで "-", Shift+タップで "_"
+        minus_under: minus_under {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&minus_under_morph>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
         };
 
         backspace_delete: backspace_delete {
@@ -176,7 +186,7 @@
         mac_default_layer {
             bindings = <
 &kp Q                             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 10 P
-&mt_exit_AML_on_tap LGUI A        &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under
+&mt_exit_AML_on_tap LGUI A        &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under LEFT_GUI 0
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RSHIFT SLASH
 &kp LCTRL                         &kp LEFT_ALT  &kp LEFT_GUI  &lt 8 LANGUAGE_2  &lt 7 SPACE  &lt 5 LANGUAGE_1      &backspace_delete  &lt 2 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
             >;
@@ -187,7 +197,7 @@
         windows_default_layer {
             bindings = <
 &kp Q                             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 10 P
-&mt_exit_AML_on_tap LCTRL A       &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under
+&mt_exit_AML_on_tap LCTRL A       &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under LCTRL 0
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RSHIFT SLASH
 &kp LCTRL                         &kp LEFT_WIN  &kp LEFT_ALT  &lt 9 LANGUAGE_2  &lt 7 SPACE  &lt 6 LANGUAGE_1      &backspace_delete  &lt 3 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
             >;
