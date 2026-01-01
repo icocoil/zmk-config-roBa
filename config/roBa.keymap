@@ -122,6 +122,17 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
         };
+
+        clipboard: clipboard {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(SPACE)>,
+                <&macro_wait_time 20>,
+                <&kp LG(NUMBER_4)>;
+
+            label = "CLIPBOARD";
+        };
     };
 
     behaviors {
@@ -263,10 +274,10 @@
 
         MAC_ARROW {
             bindings = <
-&trans    &trans          &kp UP_ARROW    &trans           &trans                          &trans         &trans          &trans        &trans            &trans
-&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans     &trans         &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LCTRL
-&trans    &trans          &trans          &trans           &trans   &trans      &trans     &trans         &trans          &trans        &trans            &trans
-&trans    &trans          &trans          &trans           &trans   &trans      &kp LA(V)  &kp LG(SPACE)                                                  &trans
+&trans    &trans          &kp UP_ARROW    &trans           &trans                           &trans         &trans          &trans        &trans            &trans
+&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans      &trans         &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LCTRL
+&trans    &trans          &trans          &trans           &trans   &trans      &trans      &trans         &trans          &trans        &trans            &trans
+&trans    &trans          &trans          &trans           &trans   &trans      &clipboard  &kp LG(SPACE)                                                  &trans
             >;
         };
 
