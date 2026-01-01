@@ -236,10 +236,10 @@
 
         MAC_SCROLL {
             bindings = <
-&trans            &trans           &kp LG(RS(T))  &trans       &trans                                    &trans    &trans                  &trans                &trans                   &trans
-&kp LG(UP_ARROW)  &kp LC(LS(TAB))  &kp LG(T)      &kp LC(TAB)  &kp LG(DOWN_ARROW)  &trans      &trans    &trans    &kp LC(LEFT_ARROW)      &kp LC(UP_ARROW)      &kp LC(RIGHT_ARROW)      &kp LC(DOWN_ARROW)
-&trans            &mkp MB4         &kp LG(W)      &mkp MB5     &trans              &trans      &trans    &trans    &kp LC(LA(LEFT_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT_ARROW))  &trans
-&trans            &trans           &trans         &trans       &trans              &trans      &mkp MB4  &mkp MB5                                                                         &trans
+&trans            &trans                &kp LG(RS(T))  &trans                 &trans                                                &trans                 &trans                  &trans                &trans                   &trans
+&kp LG(UP_ARROW)  &kp LC(LS(TAB))       &kp LG(T)      &kp LC(TAB)            &kp LG(DOWN_ARROW)  &trans      &trans                &trans                 &kp LC(LEFT_ARROW)      &kp LC(UP_ARROW)      &kp LC(RIGHT_ARROW)      &kp LC(DOWN_ARROW)
+&trans            &kp LG(LEFT_BRACKET)  &kp LG(W)      &kp LG(RIGHT_BRACKET)  &trans              &trans      &trans                &trans                 &kp LC(LA(LEFT_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT_ARROW))  &trans
+&trans            &trans                &trans         &trans                 &trans              &trans      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                                         &trans
             >;
         };
 
