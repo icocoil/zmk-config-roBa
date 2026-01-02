@@ -198,10 +198,10 @@
 
         mac_default_layer {
             bindings = <
-&kp Q                             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 10 P
-&mt_exit_AML_on_tap LGUI A        &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under LEFT_GUI 0
+&kp Q                             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 11 P
+&mt_exit_AML_on_tap LGUI A        &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &mt_exit_AML_on_tap LEFT_GUI MINUS
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RSHIFT SLASH
-&kp LCTRL                         &kp LEFT_ALT  &kp LEFT_GUI  &lt 8 LANGUAGE_2  &lt 7 SPACE  &lt 5 LANGUAGE_1      &backspace_delete  &lt 2 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
+&kp LCTRL                         &kp LEFT_ALT  &kp LEFT_GUI  &lt 9 LANGUAGE_2  &lt 7 SPACE  &lt 5 LANGUAGE_1      &backspace_delete  &lt 2 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
             >;
 
             sensor-bindings = <&inc_dec_kp LS(LA(C_VOLUME_DOWN)) LS(LA(C_VOLUME_UP))>;
@@ -209,10 +209,10 @@
 
         windows_default_layer {
             bindings = <
-&kp Q                             &kp W         &kp E         &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 10 P
-&mt_exit_AML_on_tap LCTRL A       &kp S         &kp D         &kp F             &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under LCTRL 0
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RSHIFT SLASH
-&kp LCTRL                         &kp LEFT_WIN  &kp LEFT_ALT  &lt 9 LANGUAGE_2  &lt 7 SPACE  &lt 6 LANGUAGE_1      &backspace_delete  &lt 3 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
+&kp Q                             &kp W         &kp E         &kp R              &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &lt 11 P
+&mt_exit_AML_on_tap LCTRL A       &kp S         &kp D         &kp F              &kp G        &kt K_MUTE            &kp AT_SIGN        &kp H        &kp J  &kp K      &kp L    &minus_under LCTRL 0
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V              &kp B        &kp JP_COLON          &kp SEMICOLON      &kp N        &kp M  &kp COMMA  &kp DOT  &mt_exit_AML_on_tap RSHIFT SLASH
+&kp LCTRL                         &kp LEFT_WIN  &kp LEFT_ALT  &lt 10 LANGUAGE_2  &lt 8 SPACE  &lt 6 LANGUAGE_1      &backspace_delete  &lt 3 ENTER                             &mt_exit_AML_on_tap RCTRL TAB
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -220,10 +220,10 @@
 
         mac_symbol {
             bindings = <
-&kp ESCAPE      &kp JP_AMPERSAND  &kp JP_ASTERISK   &kp JP_LPAREN  &kp JP_RPAREN                         &trans         &kp JP_LBRACKET  &kp JP_RBRACKET  &trans        &trans
-&kp TAB         &kp DOLLAR        &kp PERCENT       &kp JP_CARET   &kp JP_TILDE      &trans      &trans  &kp JP_QUOTE   &kp JP_LPAREN    &kp JP_RPAREN    &kp JP_COLON  &kp JP_PIPE
-&kp LEFT_SHIFT  &kp EXCLAMATION   &kp JP_AT         &kp HASH       &kp JP_BACKQUOTE  &trans      &trans  &kp JP_DQUOTE  &kp JP_LBRACE    &kp JP_RBRACE    &kp SEMI      &kp JP_YEN
-&kp LCTRL       &kp LALT          &kp LEFT_COMMAND  &kp LEFT_ALT   &kp LEFT_COMMAND  &trans      &trans  &trans                                                         &trans
+&kp ESCAPE      &kp AMPERSAND    &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                      &trans             &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans         &trans
+&kp TAB         &kp DOLLAR       &kp PERCENT       &kp CARET             &kp TILDE              &trans      &trans  &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON      &kp PIPE
+&kp LEFT_SHIFT  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH              &kp GRAVE              &trans      &trans  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &kp BACKSLASH
+&kp LCTRL       &kp LALT         &kp LEFT_COMMAND  &kp LEFT_ALT          &kp LEFT_COMMAND       &trans      &trans  &trans                                                                         &trans
             >;
         };
 
@@ -249,8 +249,8 @@
             bindings = <
 &trans            &trans                &kp LG(RS(T))  &trans                 &trans                                                &trans                 &trans                  &trans                &trans                   &trans
 &kp LG(UP_ARROW)  &kp LC(LS(TAB))       &kp LG(T)      &kp LC(TAB)            &kp LG(DOWN_ARROW)  &trans      &trans                &trans                 &kp LC(LEFT_ARROW)      &kp LC(UP_ARROW)      &kp LC(RIGHT_ARROW)      &kp LC(DOWN_ARROW)
-&trans            &kp LG(JP_LBRACKET)   &kp LG(W)      &kp LG(JP_RBRACKET)    &trans              &trans      &trans                &trans                 &kp LC(LA(LEFT_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT_ARROW))  &trans
-&trans            &trans                &trans         &trans                 &trans              &trans      &kp LG(JP_LBRACKET)   &kp LG(JP_RBRACKET)                                                                           &trans
+&trans            &kp LG(LEFT_BRACKET)  &kp LG(W)      &kp LG(RIGHT_BRACKET)  &trans              &trans      &trans                &trans                 &kp LC(LA(LEFT_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT_ARROW))  &trans
+&trans            &trans                &trans         &trans                 &trans              &trans      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                                         &trans
             >;
         };
 
@@ -263,7 +263,16 @@
             >;
         };
 
-        NUM_FUNCTION {
+        MAC_NUM_FUNCTION {
+            bindings = <
+&trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                                &kp ASTERISK  &kp F7  &kp F8  &kp F9  &kp F12
+&trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans      &trans         &kp MINUS     &kp F4  &kp F5  &kp F6  &kp F11
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans      &trans         &kp SLASH     &kp F1  &kp F2  &kp F3  &kp F10
+&trans        &trans        &trans        &trans        &trans     &trans      &kp BACKSPACE  &trans                                &trans
+            >;
+        };
+
+        WINDOWS_NUM_FUNCTION {
             bindings = <
 &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                                   &kp JP_ASTERISK  &kp F7  &kp F8  &kp F9  &kp F12
 &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp JP_PLUS   &trans      &trans         &kp MINUS        &kp F4  &kp F5  &kp F6  &kp F11
