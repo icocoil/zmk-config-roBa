@@ -128,7 +128,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(SPACE)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 50>,
                 <&kp LG(NUMBER_4)>;
 
             label = "CLIPBOARD";
