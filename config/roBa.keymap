@@ -126,12 +126,12 @@
         clipboard: clipboard {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <30>; // 入力間の待機時間
+            tap-ms = <40>;  // タップの時間
             bindings =
-                <&kp LG(SPACE)>,
-                <&macro_wait_time 50>,
-                <&kp LG(NUMBER_4)>;
-
-            label = "CLIPBOARD";
+                <&macro_press &kp LGUI &kp SPACE>, // CmdとSpaceを押し下げる
+                <&macro_tap &kp N4>,               // 4をタップ（押して離す）する
+                <&macro_release &kp SPACE &kp LGUI>; // SpaceとCmdを離す
         };
     };
 
