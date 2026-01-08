@@ -129,9 +129,13 @@
             wait-ms = <30>; // 入力間の待機時間
             tap-ms = <40>;  // タップの時間
             bindings =
-                <&macro_press &kp LGUI &kp SPACE>, // CmdとSpaceを押し下げる
-                <&macro_tap &kp N4>,               // 4をタップ（押して離す）する
-                <&macro_release &kp SPACE &kp LGUI>; // SpaceとCmdを離す
+                <&macro_press>,
+                <&kp LGUI &kp SPACE>,
+                <&macro_tap>,
+                <&kp N4>,
+                <&macro_release>,
+                <&kp SPACE &kp LGUI>;
+ // SpaceとCmdを離す
         };
     };
 
@@ -256,10 +260,10 @@
 
         WINDOWS_SCROLL {
             bindings = <
-&trans            &trans           &kp RS(LC(T))  &trans       &trans                              &trans    &trans                  &trans            &trans                   &trans
-&kp LC(UP_ARROW)  &kp LC(LS(TAB))  &kp LC(T)      &kp LC(TAB)  &kp LC(DOWN)  &trans      &trans    &trans    &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)       &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(D))
-&trans            &mkp MB4         &kp LC(W)      &mkp MB5     &trans        &trans      &trans    &trans    &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)      &trans
-&trans            &trans           &trans         &trans       &trans        &trans      &mkp MB4  &mkp MB5                                                                     &trans
+&trans        &trans              &kp RS(LC(T))  &trans               &trans                                       &trans               &trans                  &trans            &trans                   &trans
+&kp LC(HOME)  &kp LC(LS(TAB))     &kp LC(T)      &kp LC(TAB)          &kp LC(END)  &trans      &trans              &trans               &kp LC(LG(LEFT_ARROW))  &kp LG(TAB)       &kp LC(LG(RIGHT_ARROW))  &kp LC(LG(D))
+&trans        &kp LA(LEFT_ARROW)  &kp LC(W)      &kp LA(RIGHT_ARROW)  &trans       &trans      &trans              &trans               &kp LG(LEFT_ARROW)      &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)      &trans
+&trans        &trans              &trans         &trans               &trans       &trans      &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)                                                                     &trans
             >;
         };
 
