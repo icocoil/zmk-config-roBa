@@ -135,7 +135,8 @@
                 <&kp N4>,
                 <&macro_release>,
                 <&kp SPACE &kp LGUI>;
- // SpaceとCmdを離す
+
+            // SpaceとCmdを離す
         };
     };
 
@@ -251,7 +252,7 @@
 
         MAC_SCROLL {
             bindings = <
-&trans            &trans                &kp LG(RS(T))  &trans                 &trans                                                &trans                 &trans                  &trans                &trans                   &trans
+&trans            &trans                &kp LG(RS(T))  &trans                 &trans                                                &trans                 &kp LC(LA(J))           &kp LC(LA(N))         &kp LC(LA(K))            &trans
 &kp LG(UP_ARROW)  &kp LC(LS(TAB))       &kp LG(T)      &kp LC(TAB)            &kp LG(DOWN_ARROW)  &trans      &trans                &trans                 &kp LC(LEFT_ARROW)      &kp LC(UP_ARROW)      &kp LC(RIGHT_ARROW)      &kp LC(DOWN_ARROW)
 &trans            &kp LG(LEFT_BRACKET)  &kp LG(W)      &kp LG(RIGHT_BRACKET)  &trans              &trans      &trans                &trans                 &kp LC(LA(LEFT_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT_ARROW))  &trans
 &trans            &trans                &trans         &trans                 &trans              &trans      &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                                                                         &trans
@@ -287,10 +288,10 @@
 
         MAC_ARROW {
             bindings = <
-&trans    &trans          &kp UP_ARROW    &trans           &trans                           &trans         &trans          &trans        &trans            &trans
-&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans      &trans         &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LCTRL
-&trans    &trans          &trans          &trans           &trans   &trans      &trans      &trans         &trans          &trans        &trans            &trans
-&trans    &trans          &trans          &trans           &trans   &trans      &clipboard  &kp LG(SPACE)                                                  &trans
+&trans    &trans          &kp UP_ARROW    &trans           &trans                          &trans         &trans          &trans        &trans            &trans
+&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans      &trans     &trans         &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LCTRL
+&trans    &trans          &trans          &trans           &trans   &trans      &trans     &trans         &trans          &trans        &trans            &trans
+&trans    &trans          &trans          &trans           &trans   &trans      &kp LA(V)  &kp LG(SPACE)                                                  &trans
             >;
         };
 
