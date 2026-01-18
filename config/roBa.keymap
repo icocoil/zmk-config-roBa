@@ -302,10 +302,10 @@
 
         WINDOWS_ARROW {
             bindings = <
-&kp ESCAPE      &trans            &trans        &trans            &trans                               &trans         &trans          &kp UP_ARROW    &trans           &trans
-&kp TAB         &trans            &trans        &trans            &trans        &trans      &trans     &kp HOME       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
-&kp LEFT_SHIFT  &trans            &trans        &trans            &trans        &trans      &trans     &trans         &trans          &trans          &trans           &trans
-&kp LCTRL       &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_ALT  &trans      &kp LG(V)  &kp LA(SPACE)                                                   &trans
+&kp ESCAPE      &trans            &trans        &trans            &trans                            &trans    &trans          &kp UP_ARROW    &trans           &trans
+&kp TAB         &trans            &trans        &trans            &trans        &trans      &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
+&kp LEFT_SHIFT  &trans            &trans        &trans            &trans        &trans      &trans  &trans    &trans          &trans          &trans           &trans
+&kp LCTRL       &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_ALT  &trans      &trans  &trans                                                     &trans
             >;
         };
 
